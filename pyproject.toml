@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gnn-credit-fraud-networks"
+version = "0.1.0"
+description = "Graph Neural Networks for Credit Risk Modeling and Fraud Detection in Financial Networks"
+authors = [{name="Your Name"}]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.2",
+    "torchmetrics>=1.3",
+    "pytorch-lightning>=2.3",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "networkx",
+    "hydra-core",
+    "omegaconf",
+    "rich",
+    "tqdm",
+    "pyyaml",
+    # torch-geometric and its extensions are platform-specific; install per docs.
+]
+
+[tool.setuptools.packages.find]
+where = [""]
+include = ["gnn_credit_fraud*"]
